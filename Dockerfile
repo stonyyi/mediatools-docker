@@ -36,3 +36,6 @@ RUN ./configure \
   --enable-libxvid
 RUN make install
 RUN make distclean
+
+# rehash LD_LIBRARY_PATH
+RUN ldconfig
