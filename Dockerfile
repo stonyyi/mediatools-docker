@@ -2,6 +2,9 @@ FROM       cine/base-image-docker
 
 MAINTAINER Jeffrey Wescott <jeffrey@cine.io>
 
+# install additional media tools
+RUN apt-get install -y gpac flvmeta
+
 # install ffmpeg-related libaries
 RUN apt-get install -y libass-dev libfreetype6-dev libgpac-dev libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev libvorbis-dev libx264-dev libfdk-aac-dev libvpx-dev libspeex-dev libmp3lame-dev libfaac-dev libxvidcore-dev libopus-dev
 
