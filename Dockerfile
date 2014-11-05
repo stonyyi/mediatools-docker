@@ -11,7 +11,11 @@ RUN apt-get install -y libass-dev libfreetype6-dev libgpac-dev libsdl1.2-dev lib
 # get sources for cine.io custom ffmpeg (master always clean)
 # when we want to update FFmpeg, update cine-io/ffmpeg#master
 WORKDIR /usr/src
-RUN git clone --depth 1 git@github.com:cine-io/FFmpeg.git
+RUN git clone git@github.com:cine-io/FFmpeg.git
+
+# make sure we're on the right branch
+WORKDIR /usr/src/FFmpeg
+RUN git checkout cine_rtmp_endpoint
 
 # build ffmpeg
 WORKDIR /usr/src/FFmpeg
