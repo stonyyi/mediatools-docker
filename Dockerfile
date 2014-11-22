@@ -15,7 +15,7 @@ RUN git clone git@github.com:cine-io/FFmpeg.git
 
 # make sure we're on the right branch
 WORKDIR /usr/src/FFmpeg
-RUN git checkout cine_rtmp_endpoint
+RUN git checkout cine-rtmp-endpoint-2.4.3
 
 # build ffmpeg
 WORKDIR /usr/src/FFmpeg
