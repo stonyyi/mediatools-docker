@@ -15,7 +15,7 @@ RUN git clone git@github.com:ffmpeg/FFmpeg.git
 
 # make sure we're on the right branch
 WORKDIR /usr/src/FFmpeg
-RUN git checkout tags/n2.5.3
+RUN git checkout tags/n2.6.1
 
 # build ffmpeg
 WORKDIR /usr/src/FFmpeg
